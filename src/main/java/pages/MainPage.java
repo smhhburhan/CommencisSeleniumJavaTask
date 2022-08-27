@@ -6,9 +6,6 @@ import java.util.List;
 
 public class MainPage extends BasePage{
 
-    /*@FindBy(xpath = "//h2[@class='river__title river__title--home']")
-    public WebElement theLatestNews;*/
-
     @FindBy(xpath = "//h2[@class='post-block__title']")
     public List<WebElement> newsTitles;
 

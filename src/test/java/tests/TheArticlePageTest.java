@@ -38,17 +38,6 @@ public class TheArticlePageTest {
         Assert.assertTrue(basePage.checkElementsAreValid(theArticlePage.articleContentLinks));
         System.out.println(theArticlePage.articleContentLinks.size());
 
-        /*
-        Assert.assertTrue(basePage.checkElementsAreValid(mainPage.newsTitles));
-        Assert.assertTrue(basePage.checkElementsAreValid(mainPage.newsAuthors));
-        Assert.assertTrue(basePage.checkElementsAreValid(mainPage.newsImages));
-        System.out.println(mainPage.newsTitles.size());
-        System.out.println(mainPage.newsAuthors.size());
-        System.out.println(mainPage.newsImages.size());
-        Assert.assertEquals(mainPage.newsAuthors.size(), mainPage.newsTitles.size());
-        Assert.assertEquals(mainPage.newsImages.size(), mainPage.newsTitles.size());
-         */
-
     }
 
 
