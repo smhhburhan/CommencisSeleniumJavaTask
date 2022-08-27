@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Commencis Test Suite">
+    <parameter name="browserName" value="Chrome"/>
+    <test name="C:/Users/JimmyFloyd/Desktop/CommencisTestTask/CommencisSeleniumJavaTask/src/test">
+        <classes>
+            <class name="tests.MainPageTest">
+                <methods>
+                    <include name="goToUrl"/>
+                    <include name="checkUrl"/>
+                    <include name="checkAuthorsImages"/>
+                    <include name="clickOneOfNews"/>
+                </methods>
+            </class>
+            <class name="tests.TheArticlePageTest">
+                <methods>
+                    <include name="browserTitle"/>
+                    <include name="checkLinks"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

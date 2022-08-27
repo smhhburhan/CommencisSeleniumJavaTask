@@ -10,7 +10,6 @@
     <name>CommencisSeleniumJavaTask</name>
 
     <dependencies>
-
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -35,7 +34,6 @@
             <artifactId>webdrivermanager</artifactId>
             <version>4.2.0</version>
         </dependency>
-
     </dependencies>
 
     <properties>
