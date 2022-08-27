@@ -15,4 +15,7 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//footer[@class='post-block__footer']")
     public List<WebElement> newsImages;
 
+    @FindBy(xpath = "//header//h2//a[@class='post-block__title__link']")
+    public List<WebElement> newsTitlesLinks;
+
 }

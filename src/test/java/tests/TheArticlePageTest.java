@@ -6,8 +6,9 @@ import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.MainPage;
 import pages.TheArticlePage;
+import utils.Driver;
 
-public class TheArticlePageTest {
+public class TheArticlePageTest extends Driver {
 
     BasePage basePage;
     MainPage mainPage;
@@ -25,10 +26,12 @@ public class TheArticlePageTest {
     @Test
     public void browserTitle() {
 
-        basePage.verifyUrl(theArticlePage.driver.getTitle());
-        System.out.println(theArticlePage.driver.getTitle());
-        System.out.println(theArticlePage.articleTitle);
-        Assert.assertEquals(theArticlePage.articleTitle,theArticlePage.driver.getTitle());
+        basePage.verifyTitle(theArticlePage.driver.getTitle());
+        String websiteTitle = theArticlePage.driver.getTitle();
+        String articleTitle = theArticlePage.articleTitle.getText() +" | TechCrunch";
+        System.out.println("The Title of website:"+websiteTitle);
+        System.out.println("The Title of the article:"+articleTitle);
+        Assert.assertEquals(websiteTitle,articleTitle);
 
     }
 
@@ -36,9 +39,9 @@ public class TheArticlePageTest {
     public void checkLinks() {
 
         Assert.assertTrue(basePage.checkElementsAreValid(theArticlePage.articleContentLinks));
-        System.out.println(theArticlePage.articleContentLinks.size());
+        System.out.println("The number of the links within the news content:"+theArticlePage.articleContentLinks.size());
+        basePage.waitFor(1000);
 
     }
-
 
 }

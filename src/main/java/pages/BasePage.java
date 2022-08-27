@@ -1,7 +1,7 @@
 package pages;
 
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -12,13 +12,19 @@ import java.util.List;
 
 public class BasePage extends Driver {
 
-    static JavascriptExecutor jse = (JavascriptExecutor) driver;
     static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-    static Actions actions = new Actions(driver);
 
     public BasePage() {
 
         PageFactory.initElements(driver, this);
+
+    }
+
+    public void click(WebElement element) {
+
+        centerElement(element);
+        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 
     }
 
@@ -46,6 +52,12 @@ public class BasePage extends Driver {
 
     }
 
+    public void verifyTitle(String url) {
+
+        Assert.assertEquals(url, driver.getTitle());
+
+    }
+
     public boolean checkElementsAreValid(List<WebElement> element) {
 
         return true;
@@ -61,14 +73,6 @@ public class BasePage extends Driver {
         } catch (InterruptedException e) {
 
         }
-
-    }
-
-    public void hoverOverAndClick(WebElement element) {
-
-        actions.moveToElement(element)
-                .click()
-                .build().perform();
 
     }
 

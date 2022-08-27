@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Commencis Test Suite">
     <parameter name="browserName" value="Chrome"/>
-    <test name="C:/Users/JimmyFloyd/Desktop/CommencisTestTask/CommencisSeleniumJavaTask/src/test">
+    <test name="test">
         <classes>
             <class name="tests.MainPageTest">
                 <methods>
