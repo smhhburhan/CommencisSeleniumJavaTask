@@ -1,4 +1,4 @@
-# CommencisSeleniumJavaTask
+# SeleniumJavaTask
 
 # Requirments&Conditions
 - Using any test automation framework and preferably Java programming language (except record/play tools), please do following:
